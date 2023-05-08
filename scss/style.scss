@@ -1,21 +1,5 @@
 @charset 'utf-8';
 
-// 폰트
-@font-face {
-    font-family: "aggroL";
-    src: url(./font/SBaggroL.ttf);
-}
-
-@font-face {
-    font-family: "aggroM";
-    src: url(./font/SBaggroM.ttf);
-}
-
-@font-face {
-    font-family: "aggroB";
-    src: url(./font/SBaggroB.ttf);
-}
-
 // 공유 변수
 $main-color: #262626;
 $sub-color: #F4F0ED;
