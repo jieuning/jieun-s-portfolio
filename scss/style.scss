@@ -45,7 +45,7 @@ $sub-color2: #5D31FF;
 }
 
 // 공유 클래스
-body {
+body, html {
     color: #{$main-color};
     font-family: "aggroB";
     background: #F4F0ED;
