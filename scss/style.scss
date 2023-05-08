@@ -1,0 +1,475 @@
+@charset 'utf-8';
+
+// 폰트
+@font-face {
+    font-family: "aggroL";
+    src: url(./font/SBaggroL.ttf);
+}
+
+@font-face {
+    font-family: "aggroM";
+    src: url(./font/SBaggroM.ttf);
+}
+
+@font-face {
+    font-family: "aggroB";
+    src: url(./font/SBaggroB.ttf);
+}
+
+// 공유 변수
+$main-color: #262626;
+$sub-color: #F4F0ED;
+$sub-color2: #5D31FF;
+
+@mixin background-area {
+    width: 50%;
+    background-color: #{$main-color};
+}
+
+@mixin center-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin animation {
+    position: relative;
+    transition: all 1s;
+}
+
+@mixin button-style {
+    margin-top: 20px;
+    padding: 8px 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+    overflow: hidden;
+}
+
+@mixin button-before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    transition: all .4s;
+}
+
+// 공유 클래스
+body {
+    color: #{$main-color};
+    font-family: "aggroB";
+    background: #F4F0ED;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 76px;
+    color: #{$sub-color};
+    box-shadow: inset 0 -35px 0 #{$sub-color2};
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.project {
+    @include center-align();
+    gap: 150px;
+    line-height: 1.5;
+    margin: 0 20px;
+
+    img {
+        width: 20%;
+        border: 3px solid #{$main-color};
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    .pro-content {
+        transform: translateX(200px);
+        opacity: 0;
+        transition: all 1s;
+    }
+    span {
+        font-size: 18px;
+        letter-spacing: -0.04em;
+        font-family: 'aggroM';
+        box-shadow: inset 0 -18px 0 #C1C4FF;
+    }
+
+    p {
+        width: 456px;
+        word-break: break-all;
+        font-family: 'aggroL';
+    }
+
+    button {
+        @include button-style();
+        background-color: transparent;
+        border: solid 1px #{$main-color};
+        color: #{$main-color};
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button::before {
+        @include button-before();
+        background-color: #{$main-color};
+    }
+
+    button:hover::before {
+        transform: translateY(-100%);
+        z-index: -1;
+    }
+
+    button:hover {
+        color: #{$sub-color};
+    }
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #{$main-color};
+}
+
+// 공유 클래스 끝
+
+// 메인 영역
+.main-section {
+    display: flex;
+
+    .category {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 25px 25px 10px 25px;
+        z-index: 99;
+
+        img {
+            width: 26px;
+            cursor: pointer;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(100%);
+            height: auto;
+            background-color: #C1C4FF;
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            transition: all .4s;
+
+            .close-btn {
+                width: 20px;
+                cursor: pointer;
+            }
+
+            div {
+                font-size: 32px;
+                color: #{$main-color};
+                cursor: pointer;
+                transition: all .4s;
+            }
+
+            div:hover {
+                box-shadow: inset 0 -20px 0 #{$sub-color2};
+            }
+        }
+
+        .active {
+            transform: translateX(0%);
+        }
+    }
+
+    .github_btn {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        padding: 10px 25px 25px 25px;
+        img {
+            width: 26px;
+        }
+    }
+
+    .left-area {
+        @include background-area();
+
+        h1 {
+            position: absolute;
+            padding: 25px;
+            color: #{$sub-color};
+        }
+
+        .main-title {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 25px;
+            line-height: 1.4;
+
+            p {
+                color: #{$sub-color};
+                font-size: 52px;
+                font-family: "aggroB";
+                letter-spacing: -0.02em;
+            }
+
+            p:first-child {
+                font-family: "aggroL";
+                color: #{$sub-color};
+                font-size: 18px;
+            }
+
+            p:last-child {
+                box-shadow: inset 0 -30px 0 #{$sub-color2};
+            }
+        }
+    }
+
+    .right-area {
+        width: 50%;
+        @include center-align();
+    }
+}
+
+//스킬 영역
+.skill-section {
+    height: auto;
+    display: flex;
+
+    .skill-left-area {
+        position: sticky;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        @include center-align();
+        flex-direction: column;
+        font-family: 'aggroM';
+        line-height: 1.5;
+
+        div {
+            display: block;
+            position: absolute;
+            transition: .4s all;
+            opacity: 0;
+        }
+    }
+
+    .skill-right-area {
+        text-align: center;
+        @include background-area();
+
+        div {
+            letter-spacing: -0.07em;
+            font-size: 64px;
+            height: 100vh;
+            @include center-align();
+            color: #{$sub-color};
+        }
+    }
+}
+
+// 스킬 영역 끝
+
+// 프로젝트 영역
+.project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    height: auto;
+    color: #333;
+    padding: 250px 0;
+}
+
+// 어바웃 영역
+.about-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 250px 40px;
+    width: 70%;
+    gap: 60px;
+
+    h5 {
+        position: relative;
+        font-size: 76px;
+        letter-spacing: -0.04em;
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    .intro {
+        @include center-align();
+        gap: 60px;
+        margin-bottom: 200px;
+        @include animation();
+        transform: translateX(200px);
+        opacity: 0;
+
+        img {
+            width: 25%;
+        }
+
+        span {
+            bottom: 0;
+            font-size: 28px;
+            font-family: 'aggroL';
+            line-height: 1.5;
+            letter-spacing: -0.06em;
+        }
+    }
+
+    .per-title {
+        width: 70%;
+        word-break: break-all;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @include animation();
+        transform: translateX(-100px);
+        opacity: 0;
+
+        span {
+            font-family: 'aggroM';
+            line-height: 1.4;
+        }
+    }
+
+    .keyword {
+        @include center-align();
+        margin-bottom: 200px;
+
+        li {
+            position: relative;
+            width: calc(33.3333%);
+            padding-bottom: calc(33.3333%);
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 1px #{$main-color};
+            @include center-align();
+
+            p {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 24px;
+                font-family: 'aggroM';
+                width: 100%;
+                color: #{$main-color};
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .left-keyword {
+            @include animation();
+            transform: translateX(200px);
+        }
+
+        .right-keyword {
+            @include animation();
+            transform: translateX(-200px);
+        }
+    }
+
+    .experience {
+        font-family: "aggroM";
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        @include animation();
+        transform: translateX(200px);
+        opacity: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .txt-wrap {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .line {
+            width: 6px;
+            height: 80px;
+            background-color: #{$main-color};
+            display: block;
+            margin: 20px 0;
+        }
+    }
+}
+
+// 어바웃 영역 끝
+
+.contact-section {
+    height: 100vh;
+    @include center-align();
+    flex-direction: column;
+    background-color: #{$main-color};
+
+    span {
+        font-size: 56px;
+        color: #{$sub-color};
+    }
+
+    button {
+        @include button-style();
+        background-color: transparent;
+        border: solid 1px #{$sub-color};
+        color: #{$sub-color};
+        z-index: 10;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button::before {
+        @include button-before();
+        background-color: #{$sub-color};
+        z-index: -1;
+    }
+
+    button:hover::before {
+        transform: translateY(-100%);
+        background-color: #{$sub-color};
+    }
+
+    button:hover {
+        color: #{$main-color};
+    }
+    .info {
+        font-size: 18px;
+        margin-top: 50px;
+        font-family: 'aggroL';
+    }
+}
