@@ -45,9 +45,9 @@ $sub-color2: #5D31FF;
 }
 
 // 공유 클래스
-body, html {
+body {
     color: #{$main-color};
-    font-family: "aggroB";
+    font-family: "SBAggroB";
     background: #F4F0ED;
     overflow-x: hidden;
 }
@@ -92,14 +92,14 @@ h3 {
     span {
         font-size: 18px;
         letter-spacing: -0.04em;
-        font-family: 'aggroM';
+        font-family: "SBAggroM";
         box-shadow: inset 0 -18px 0 #C1C4FF;
     }
 
     p {
         width: 456px;
         word-break: break-all;
-        font-family: 'aggroL';
+        font-family: "SBAggroL";
     }
 
     button {
@@ -176,7 +176,6 @@ h3 {
                 color: #{$main-color};
                 cursor: pointer;
                 transition: all .4s;
-                font-family: 'aggroB';
             }
 
             div:hover {
@@ -222,7 +221,7 @@ h3 {
             }
 
             p:first-child {
-                font-family: "aggroL";
+                font-family: "SBAggroL";
                 color: #{$sub-color};
                 font-size: 18px;
             }
@@ -251,7 +250,7 @@ h3 {
         height: 100vh;
         @include center-align();
         flex-direction: column;
-        font-family: 'aggroM';
+        font-family: "SBAggroM";
         line-height: 1.5;
 
         div {
@@ -321,7 +320,7 @@ h3 {
         span {
             bottom: 0;
             font-size: 28px;
-            font-family: 'aggroL';
+            font-family: "SBAggroL";
             line-height: 1.5;
             letter-spacing: -0.06em;
         }
@@ -338,7 +337,7 @@ h3 {
         opacity: 0;
 
         span {
-            font-family: 'aggroM';
+            font-family: "SBAggroM";
             line-height: 1.4;
         }
     }
@@ -361,7 +360,7 @@ h3 {
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 24px;
-                font-family: 'aggroM';
+                font-family: "SBAggroM";
                 width: 100%;
                 color: #{$main-color};
                 display: block;
@@ -381,7 +380,7 @@ h3 {
     }
 
     .experience {
-        font-family: "aggroM";
+        font-family: "SBAggroM";
         display: flex;
         justify-content: center;
         gap: 60px;
@@ -454,6 +453,6 @@ h3 {
     .info {
         font-size: 18px;
         margin-top: 50px;
-        font-family: 'aggroL';
+        font-family: "SBAggroL";
     }
 }
