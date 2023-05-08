@@ -1,6 +1,11 @@
 @charset 'utf-8';
 
 @font-face {
+    font-family: "aggroB";
+    src: url(./font/SBaggroB.ttf);
+}
+
+@font-face {
     font-family: "aggroL";
     src: url(./font/SBaggroL.ttf);
 }
@@ -10,7 +15,4 @@
     src: url(./font/SBaggroM.ttf);
 }
 
-@font-face {
-    font-family: "aggroB";
-    src: url(./font/SBaggroB.ttf);
-}
+
