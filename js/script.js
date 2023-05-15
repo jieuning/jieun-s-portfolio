@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const deviceImg = document.querySelectorAll('.project img');
   const proContent = document.querySelectorAll('.project div');
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     observer1.observe(deviceImg[i]);
     observer1.observe(proContent[i]);
   }
