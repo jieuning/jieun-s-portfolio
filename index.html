@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 플러그인 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("safhfbobRTqExyi99");
+    })();
+  </script>
   <!-- script -->
   <script src="./js/script.js"></script>
 
@@ -27,11 +34,11 @@
       <img src="image/category_btn.png" alt="카테고리" />
       <nav>
         <img class="close-btn" src="image/close_btn.png" alt="카테고리 닫기 버튼" />
-        <div>MAIN</div>
-        <div>SKILL</div>
-        <div>PROJECT</div>
-        <div>ABOUT</div>
-        <div>CONTACT</div>
+        <p>MAIN</p>
+        <p>SKILL</p>
+        <p>PROJECT</p>
+        <p>ABOUT</p>
+        <p>CONTACT</p>
       </nav>
     </div>
     <!-- 깃허브 이동 버튼 -->
@@ -44,7 +51,7 @@
     <div class="left-area">
       <h1>JIEUN'S</h1>
       <div class="main-title">
-        <p>배움과 도전을 망설이지 않는 JIEUN입니다.</p>
+        <p>세상을 편리하게 만드는 웹퍼블리셔 JIEUN입니다.</p>
         <p>JIEUN'S</p>
         <p>PORTFOLIO</p>
       </div>
@@ -67,15 +74,16 @@
         <p>JSX문법을 사용하여 레이아웃 제작</p>
         <p>Component, Props, Router 등 React에 대한 이해 </p>
         <p>React Hook을 활용한 기능 구현</p>
-        <p>Map을 이용한 반복문 작성</p>
+        <p>Map을 이용한 반복되는 코드 최소화</p>
         <p>Redux를 이용한 장바구니 기능 구현</p>
         <p>Firebase를 이용한 로그인/ 회원가입 기능 구현</p>
         <p>Styled-component를 이용한 CSS 작성</p>
       </div>
       <div class="content2">
-        <p>모던자바스크립트 활용</p>
-        <p>Vanilla Javascript로 스크롤 애니메이션 기능 구현</p>
-        <p>Jquery DOM을 이용한 카테고리 기능 구현</p>
+        <p>ES6문법 활용</p>
+        <p>Vanilla Javascript를 아용한 애니메이션 기능 구현</p>
+        <p>Jquery DOM을 이용한 기능 구현</p>
+        <p>비동기 통신 AJAX에 대한 이해</p>
       </div>
       <div class="content3">
         <p>시멘틱 마크업을 통한 의미있는 구조 설계</p>
@@ -84,8 +92,8 @@
         <p>SCSS를 이용한 프리프로세싱</p>
       </div>
       <div class="content4">
-        <p>UI&UX에 대한 이해</p>
-        <p>Potoshop, Illustrator, Figma를 이용하여<br/> 
+        <p>UIUX에 대한 이해</p>
+        <p>Potoshop, Illustrator, Figma를 이용하여<br />
           아이콘, 배너, 와이어프레임, 웹 사이트 시안 제작 </p>
         <p>Github 관리</p>
       </div>
@@ -142,7 +150,7 @@
         <h3>Bestseller</h3>
         <span>#반응형 #Jquery #SCSS</span><br />
         <p>
-          마켓 회사 소개 사이트입니다. Jquery를 이용하여 아코디언 메뉴, 이미지 호버 기능,  스크롤 애니메이션, 슬라이드 기능을
+          마켓 회사 소개 사이트입니다. Jquery를 이용하여 아코디언 메뉴, 이미지 호버 기능, 스크롤 애니메이션, 슬라이드 기능을
           구현하였습니다.
         </p>
         <a href="https://jieuning.github.io/bestseller/">
@@ -157,14 +165,14 @@
         <h3>Jieun's portfolio</h3>
         <span>#Javascript #SCSS</span><br />
         <p>
-          직접 제작한 포트폴리오 페이지 입니다. Javascript와 Jquery를 이용하여 카테고리 기능, 
-          텍스트 전환 애니메이션, 스크롤시 나타나는 애니메이션 기능을 구현하였습니다. 
+          직접 제작한 포트폴리오 페이지 입니다. Javascript와 Jquery를 이용하여 카테고리 기능,
+          텍스트 전환 애니메이션, 스크롤시 나타나는 애니메이션 기능을 구현하였습니다.
         </p>
         <a href="https://jieuning.github.io/jieun-s-portfolio/">
           <button class="view">View</button>
         </a>
       </div>
-    </div>  
+    </div>
   </section>
   <!-- 어바웃 타이틀 -->
   <section id="about" class="title-section">
@@ -174,8 +182,13 @@
   <section class="about-section">
     <h5>Introduce</h5>
     <div class="intro">
-      <img src="./image/my_profile.png" alt="프로필사진" />
-      <span>"배움과 도전을 망설이지 않고<br/> 계속 성장하는 JIEUN입니다."</span>
+      <img src="./image/my_profile2.png" alt="프로필사진" />
+      <div>
+        <p>"시도와 실패를 반복하며 기능을 구현하고 안주하지 않고 </p>
+        <p>더 나은 기능으로 발전 시키기 위한 방법을 고민했던 경험은</p>
+        <p>앞으로 업무를 함에 있어 실패를 두려워 하지 않고 더 나은 발전과 성장으로</p>
+        <p>나아가는 발판이 될 것입니다."</p>
+      </div>
     </div>
     <div class="per-title">
       <h5>Personality</h5>
@@ -188,39 +201,34 @@
     </div>
     <ul class="keyword">
       <li class="left-keyword">
-        <p>새로움에 대한 도전정신</p>
+        <p>성장지향적</p>
       </li>
       <li>
-        <p>불타는 열정</p>
+        <p>원활한 커뮤니케이션</p>
       </li>
       <li class="right-keyword">
-        <p>강한 책임감</p>
+        <p>책임감</p>
       </li>
     </ul>
-    <h5>Experience</h5>
-    <ul class="experience">
-      <li>
-        <span class="line"></span>
-        <div class="txt-wrap">
-          <span>2021.05 - 2021.07</span>
-          <span>이젠컴퓨터학원</span>
-          <span>광고디자인 과정 수료</span>
-        </div>
-      </li>
+    <h5>Education</h5>
+    <ul class="history education">
       <li>
         <span class="line"></span>
         <div class="txt-wrap">
           <span>2021.12 - 2022.06</span>
           <span>이젠컴퓨터학원</span>
-          <span>코딩을 활용한 UI&UX 과정 수료</span>
+          <span>코딩을 활용한 UIUX 과정 수료</span>
         </div>
       </li>
+    </ul>
+    <h5>Experience</h5>
+    <ul class="history experience">
       <li>
         <span class="line"></span>
         <div class="txt-wrap">
           <span>2022.08 - 2022.11</span>
           <span>STTCompany</span>
-          <span>UI&UX 디자이너로 근무</span>
+          <span>자사 서비스 앱/웹 UIUX디자인</span>
         </div>
       </li>
     </ul>
@@ -228,12 +236,16 @@
   <!-- 콘텍트 영역 -->
   <section id="contact" class="contact-section">
     <span>끝까지 봐주셔서 감사합니다.</span>
-    <span class="info">버튼을 클릭하시면 카카오톡 오픈채팅 페이지로 이동합니다.</span>
-    <a href="https://open.kakao.com/o/smoAlfjf">
-      <button>
-        contact
-      </button>
-    </a>
+    <div class="mail">
+      <span class="info">텍스트 입력 후 'SEND' 버튼을 클릭하시면 메일이 전송됩니다.</span>
+      <div class="input-box">
+        <input type="text" id="name" placeholder="이름" required />
+        <input type="email" id="email" placeholder="이메일" required />
+      </div>
+      <input type="text" id="subject" placeholder="제목" required /><br />
+      <textarea id="message" placeholder="내용"></textarea required><br />
+      <button onclick="sendEmail()">send</button>
+    </div>
   </section>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>

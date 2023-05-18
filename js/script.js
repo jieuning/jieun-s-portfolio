@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelectorAll('nav div');
+  const menu = document.querySelectorAll('nav p');
   const section1 = document.querySelector('#main');
   const section2 = document.querySelector('#skill');
   const section3 = document.querySelector('#projects');
@@ -78,20 +78,39 @@ document.addEventListener('DOMContentLoaded', function () {
   const intro = document.querySelector('.intro');
   const leftKeyword = document.querySelector('.left-keyword');
   const rightKeyword = document.querySelector('.right-keyword');
+  const education = document.querySelector('.education');
   const experience = document.querySelector('.experience');
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     observer2.observe(title[i]);
   }
   observer2.observe(perTitle);
   observer2.observe(intro);
   observer2.observe(leftKeyword);
   observer2.observe(rightKeyword);
+  observer2.observe(education);
   observer2.observe(experience);
 });
 
+// emailjs
+const sendEmail = () => {
+  let templateParams  = {
+      name : document.getElementById('name').value,
+      email : document.getElementById('email').value,
+      message : document.getElementById('message').value,
+  }
+  emailjs.send('service_9xiq6nr', 'template_rl9hnii', templateParams)
+  .then(function(res){
+    alert("메일이 성공적으로 발송되었습니다.");
+  }, function(error){
+    console.log(error)
+    alert("메일 전송에 실패했습니다.");
+  })
+}
+
+
 // jquery
 $(document).ready(function () {
-  // 카테고리 열림/닫힘
+  // 카테고리 토글
   $('.category').click(function () {
     $('nav').toggleClass('active');
   });
