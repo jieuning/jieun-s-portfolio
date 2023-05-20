@@ -6,520 +6,517 @@ $sub-color: #F4F0ED;
 $sub-color2: #5D31FF;
 
 @mixin background-area {
-    width: 50%;
-    background-color: #{$main-color};
+  width: 50%;
+  background-color: #{$main-color};
 }
 
 @mixin center-align {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin animation {
-    position: relative;
-    transition: all 1s;
+  position: relative;
+  transition: all 1s;
 }
 
 @mixin button-style {
-    margin-top: 20px;
-    padding: 0.8rem 1.8rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    transition: all .4s;
-    overflow: hidden;
+  margin-top: 20px;
+  padding: 0.8rem 1.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all .4s;
+  overflow: hidden;
 }
 
 @mixin button-before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    left: 0;
-    transition: all .4s;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  transition: all .4s;
 }
 
 // 공유 클래스
-
 body {
-    color: #{$main-color};
-    font-family: "SUIT-H";
-    background-color: #F4F0ED;
-    overflow-x: hidden;
+  color: #{$main-color};
+  font-family: "SUIT-H";
+  background-color: #F4F0ED;
+  overflow-x: hidden;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 section {
-    width: 100%;
-    margin: 0 auto;
-    height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 h2 {
-    font-size: 8.4rem;
-    color: #{$sub-color};
-    box-shadow: inset 0 -35px 0 #{$sub-color2};
+  font-size: 8.4rem;
+  color: #{$sub-color};
+  box-shadow: inset 0 -35px 0 #{$sub-color2};
 }
 
 h3 {
-    font-size: 28px;
-    letter-spacing: -0.06em;
+  font-size: 28px;
+  letter-spacing: -0.06em;
 }
 
 .project {
-    @include center-align();
-    gap: 82px;
-    line-height: 1.4;
+  @include center-align();
+  gap: 82px;
+  line-height: 1.4;
 
-    .m-pro-title {
-        display: none;
-    }
+  .m-pro-title {
+    display: none;
+  }
 
-    img {
-        width: 36rem;
-        border: 3px solid #{$main-color};
-        transform: translateX(-200px);
-        opacity: 0;
-        transition: all 1s;
-    }
+  img {
+    width: 36rem;
+    border: 3px solid #{$main-color};
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 1s;
+  }
 
-    .pro-content {
-        transform: translateX(200px);
-        opacity: 0;
-        transition: all 1s;
-    }
+  .pro-content {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 1s;
+  }
 
-    span {
-        font-size: 2rem;
-        letter-spacing: -0.04em;
-        font-family: "SUIT-EB";
-        box-shadow: inset 0 -18px 0 #C1C4FF;
-    }
+  span {
+    font-size: 2rem;
+    letter-spacing: -0.04em;
+    font-family: "SUIT-EB";
+    box-shadow: inset 0 -18px 0 #C1C4FF;
+  }
 
-    p {
-        font-size: 1.8rem;
-        font-family: "SUIT-M";
-        width: 44rem;
-    }
+  p {
+    font-size: 1.8rem;
+    font-family: "SUIT-M";
+    width: 44rem;
+  }
 
-    button {
-        @include button-style();
-        background-color: transparent;
-        border: solid 1px #{$main-color};
-        color: #{$main-color};
-    }
+  button {
+    @include button-style();
+    background-color: transparent;
+    border: solid 1px #{$main-color};
+    color: #{$main-color};
+  }
 
-    button:focus {
-        outline: none;
-    }
+  button:focus {
+    outline: none;
+  }
 
-    button::before {
-        @include button-before();
-        background-color: #{$main-color};
-    }
+  button::before {
+    @include button-before();
+    background-color: #{$main-color};
+  }
 
-    button:hover::before {
-        transform: translateY(-100%);
-        z-index: -1;
-    }
+  button:hover::before {
+    transform: translateY(-100%);
+    z-index: -1;
+  }
 
-    button:hover {
-        color: #{$sub-color};
-    }
+  button:hover {
+    color: #{$sub-color};
+  }
 }
 
 .title-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #{$main-color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #{$main-color};
 }
-
 // 공유 클래스 끝
 
 // 메인 영역
 .main-section {
-    display: flex;
+  display: flex;
 
-    .category {
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 25px 25px 10px 25px;
-        z-index: 99;
+  .category {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 25px 25px 10px 25px;
+    z-index: 99;
 
-        img {
-            width: 26px;
-            cursor: pointer;
-        }
-
-        /* 카테고리 */
-        nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translateX(100%);
-            height: auto;
-            background-color: #C1C4FF;
-            padding: 30px 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 36px;
-            transition: all .4s;
-
-            .close-btn {
-                width: 20px;
-                cursor: pointer;
-            }
-
-            p {
-                text-align: center;
-                font-size: 3.6rem;
-                color: #{$main-color};
-                letter-spacing: -0.02em;
-                cursor: pointer;
-                transition: all .4s;
-            }
-
-            p:hover {
-                box-shadow: inset 0 -18px 0 #{$sub-color2};
-            }
-        }
-
-        .active {
-            transform: translateX(0%);
-        }
+    img {
+      width: 26px;
+      cursor: pointer;
     }
 
-    .github_btn {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        padding: 10px 25px 25px 25px;
+    /* 카테고리 */
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      height: auto;
+      background-color: #C1C4FF;
+      padding: 30px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      transition: all .4s;
 
-        img {
-            width: 26px;
-        }
+      .close-btn {
+        width: 20px;
+        cursor: pointer;
+      }
+
+      p {
+        text-align: center;
+        font-size: 3.6rem;
+        color: #{$main-color};
+        letter-spacing: -0.02em;
+        cursor: pointer;
+        transition: all .4s;
+      }
+
+      p:hover {
+        box-shadow: inset 0 -18px 0 #{$sub-color2};
+      }
     }
 
-    .left-area {
-        @include background-area();
+    .active {
+      transform: translateX(0%);
+    }
+  }
 
-        h1 {
-            position: absolute;
-            padding: 25px;
-            color: #{$sub-color};
-            font-family: "SBAggroB";
-            font-size: 1.8rem;
-        }
+  .github_btn {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    padding: 10px 25px 25px 25px;
 
-        .main-title {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding-left: 25px;
-            line-height: 1.2;
+    img {
+      width: 26px;
+    }
+  }
 
-            p {
-                color: #{$sub-color};
-                font-size: 6.4rem;
-                letter-spacing: -0.04em;
-                font-family: "SUIT-H";
-            }
+  .left-area {
+    @include background-area();
 
-            p:first-child {
-                color: #{$sub-color};
-                font-size: 1.8rem;
-                font-family: "SUIT-R";
-                padding-bottom: 10px;
-            }
-
-            p:last-child {
-                box-shadow: inset 0 -30px 0 #{$sub-color2};
-            }
-        }
+    h1 {
+      position: absolute;
+      padding: 25px;
+      color: #{$sub-color};
+      font-family: "SBAggroB";
+      font-size: 1.8rem;
     }
 
-    .right-area {
-        width: 50%;
-        @include center-align();
+    .main-title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 25px;
+      line-height: 1.2;
+
+      p {
+        color: #{$sub-color};
+        font-size: 6.4rem;
+        letter-spacing: -0.04em;
+        font-family: "SUIT-H";
+      }
+
+      p:first-child {
+        color: #{$sub-color};
+        font-size: 1.8rem;
+        font-family: "SUIT-R";
+        padding-bottom: 10px;
+      }
+
+      p:last-child {
+        box-shadow: inset 0 -30px 0 #{$sub-color2};
+      }
     }
+  }
+
+  .right-area {
+    width: 50%;
+    @include center-align();
+  }
 }
 
 //스킬 영역
 .skill-section {
-    height: auto;
-    display: flex;
+  height: auto;
+  display: flex;
 
-    .skill-left-area {
-        position: sticky;
-        top: 0;
-        width: 50%;
-        height: 100vh;
-        @include center-align();
-        flex-direction: column;
-        font-family: "SUIT-B";
-        font-size: 1.8rem;
-        line-height: 1.5;
+  .skill-left-area {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    @include center-align();
+    flex-direction: column;
+    font-family: "SUIT-B";
+    font-size: 1.8rem;
+    line-height: 1.5;
 
-        div {
-            display: block;
-            position: absolute;
-            transition: .4s all;
-            opacity: 0;
-        }
+    div {
+      display: block;
+      position: absolute;
+      transition: .4s all;
+      opacity: 0;
     }
+  }
 
-    .m-skill-left-area {
-        display: none;
+  .m-skill-left-area {
+    display: none;
+  }
+
+  .skill-right-area {
+    text-align: center;
+    @include background-area();
+
+    div {
+      letter-spacing: -0.04em;
+      font-size: 6.4rem;
+      height: 100vh;
+      @include center-align();
+      color: #{$sub-color};
     }
-
-    .skill-right-area {
-        text-align: center;
-        @include background-area();
-
-        div {
-            letter-spacing: -0.04em;
-            font-size: 6.4rem;
-            height: 100vh;
-            @include center-align();
-            color: #{$sub-color};
-        }
-    }
+  }
 }
-
 // 스킬 영역 끝
 
 // 프로젝트 영역
 .project-section {
-    display: flex;
-    flex-direction: column;
-    gap: 200px;
-    height: auto;
-    color: #333;
-    padding: 250px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  height: auto;
+  color: #333;
+  padding: 250px 0;
 }
 
 // 어바웃 영역
 .about-section {
-    height: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 250px 40px;
+  width: 70%;
+  gap: 60px;
+
+  h5 {
+    font-size: 7.6rem;
+    letter-spacing: -0.04em;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .about-bottom {
+    margin-bottom: 200px;
+  }
+
+  .intro {
+    @include center-align();
+    gap: 76px;
+    @include animation();
+    transform: translateX(200px);
+    opacity: 0;
+
+    img {
+      width: 32rem;
+    }
+
+    p {
+      font-size: 2rem;
+      font-family: "SUIT-M";
+      line-height: 1.4;
+      letter-spacing: -0.06em;
+      width: 48rem;
+    }
+  }
+
+  .per-content {
     display: flex;
     flex-direction: column;
-    padding: 250px 40px;
-    width: 70%;
+
+    .per-text {
+      font-family: "SUIT-M";
+      word-wrap: break-all;
+      line-height: 1.4;
+      letter-spacing: -0.06em;
+      font-size: 2rem;
+      width: 56rem;
+      @include animation();
+      transform: translateX(-100px);
+      opacity: 0;
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    li span {
+      box-shadow: inset 0 -18px 0 #C1C4FF;
+    }
+  }
+
+  .keyword {
+    @include center-align();
+    letter-spacing: -0.06em;
+
+    li {
+      position: relative;
+      width: calc(33.3333%);
+      padding-bottom: calc(33.3333%);
+      background-color: transparent;
+      border-radius: 50%;
+      border: solid 1px #{$main-color};
+      @include center-align();
+
+      p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.6rem;
+        font-family: "SUIT-SB";
+        width: 100%;
+        color: #{$main-color};
+        text-align: center;
+      }
+    }
+
+    .left-keyword {
+      @include animation();
+      transform: translateX(200px);
+    }
+
+    .right-keyword {
+      @include animation();
+      transform: translateX(-200px);
+    }
+  }
+
+  // Education, Experience
+  .history {
+    font-family: "SUIT-B";
+    display: flex;
+    flex-direction: column;
     gap: 60px;
+    @include animation();
+    transform: translateX(200px);
+    opacity: 0;
 
-    h5 {
-        font-size: 7.6rem;
-        letter-spacing: -0.04em;
-        transform: translateX(-100px);
-        opacity: 0;
-        transition: all 1s;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .about-bottom {
-        margin-bottom: 200px;
+    .txt-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      font-size: 2rem;
     }
 
-    .intro {
-        @include center-align();
-        gap: 76px;
-        @include animation();
-        transform: translateX(200px);
-        opacity: 0;
-
-        img {
-            width: 32rem;
-        }
-
-        p {
-            font-size: 2rem;
-            font-family: "SUIT-M";
-            line-height: 1.4;
-            letter-spacing: -0.06em;
-            width: 48rem;
-        }
+    .line {
+      width: 6px;
+      height: 80px;
+      background-color: #{$main-color};
+      display: block;
+      margin: 20px 0;
     }
-
-    .per-content {
-        display: flex;
-        flex-direction: column;
-
-        .per-text {
-            font-family: "SUIT-M";
-            word-wrap: break-all;
-            line-height: 1.4;
-            letter-spacing: -0.06em;
-            font-size: 2rem;
-            width: 56rem;
-            @include animation();
-            transform: translateX(-100px);
-            opacity: 0;
-            margin-bottom: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        li span {
-            box-shadow: inset 0 -18px 0 #C1C4FF;
-        }
-    }
-
-    .keyword {
-        @include center-align();
-        letter-spacing: -0.06em;
-
-        li {
-            position: relative;
-            width: calc(33.3333%);
-            padding-bottom: calc(33.3333%);
-            background-color: transparent;
-            border-radius: 50%;
-            border: solid 1px #{$main-color};
-            @include center-align();
-
-            p {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 2.6rem;
-                font-family: "SUIT-SB";
-                width: 100%;
-                color: #{$main-color};
-                text-align: center;
-            }
-        }
-
-        .left-keyword {
-            @include animation();
-            transform: translateX(200px);
-        }
-
-        .right-keyword {
-            @include animation();
-            transform: translateX(-200px);
-        }
-    }
-
-    .history {
-        font-family: "SUIT-B";
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        @include animation();
-        transform: translateX(200px);
-        opacity: 0;
-
-        li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .txt-wrap {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.6;
-            font-size: 2rem;
-        }
-
-        .line {
-            width: 6px;
-            height: 80px;
-            background-color: #{$main-color};
-            display: block;
-            margin: 20px 0;
-        }
-    }
+  }
 }
-
 // 어바웃 영역 끝
 
 .contact-section {
-    height: 100vh;
-    @include center-align();
-    flex-direction: column;
-    background-color: #{$main-color};
+  height: 100vh;
+  @include center-align();
+  flex-direction: column;
+  background-color: #{$main-color};
 
-    span {
-        font-size: 5.6rem;
-        color: #{$sub-color};
+  span {
+    font-size: 5.6rem;
+    color: #{$sub-color};
+  }
+
+  button {
+    @include button-style();
+    background-color: transparent;
+    border: solid 1px #{$sub-color};
+    color: #{$sub-color};
+    z-index: 10;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button::before {
+    @include button-before();
+    background-color: #{$sub-color};
+    z-index: -1;
+  }
+
+  button:hover::before {
+    transform: translateY(-100%);
+    background-color: #{$sub-color};
+  }
+
+  button:hover {
+    color: #{$main-color};
+  }
+
+  .info {
+    font-size: 1.8rem;
+    margin-top: 50px;
+    font-family: "SUIT-M";
+  }
+
+  .mail {
+    text-align: center;
+    margin-top: 50px;
+
+    .input-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
     }
 
-    button {
-        @include button-style();
-        background-color: transparent;
-        border: solid 1px #{$sub-color};
-        color: #{$sub-color};
-        z-index: 10;
+    input,
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 3px;
+      background-color: #{$sub-color};
     }
 
-    button:focus {
-        outline: none;
+    textarea {
+      min-height: 150px;
     }
 
-    button::before {
-        @include button-before();
-        background-color: #{$sub-color};
-        z-index: -1;
+    input:focus {
+      outline: none;
     }
 
-    button:hover::before {
-        transform: translateY(-100%);
-        background-color: #{$sub-color};
+    textarea:focus {
+      outline: none;
     }
-
-    button:hover {
-        color: #{$main-color};
-    }
-
-    .info {
-        font-size: 1.8rem;
-        margin-top: 50px;
-        font-family: "SUIT-M";
-    }
-
-    .mail {
-        text-align: center;
-        margin-top: 50px;
-
-        .input-box {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        input,
-        textarea {
-            box-sizing: border-box;
-            width: 100%;
-            border: none;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 3px;
-            background-color: #{$sub-color};
-        }
-
-        textarea {
-            min-height: 150px;
-        }
-
-        input:focus {
-            outline: none;
-        }
-
-        textarea:focus {
-            outline: none;
-        }
-    }
+  }
 }

@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+/* 로고 폰트 */
 @font-face {
     font-family: 'SBAggroB';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
@@ -8,6 +9,7 @@
     font-style: normal;
 }
 
+/* 본문 폰트 */
 @font-face {
     font-family: "SUIT-M";
     src: url(./font/SUIT-Medium.woff2) format('woff2'),
