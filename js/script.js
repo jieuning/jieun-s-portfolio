@@ -45,9 +45,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', activeElements);
 
+  // mobile skill section 스크롤 애니메이션
+  const mobObserver = new IntersectionObserver((e) => {
+    e.forEach((mobSkill) => {
+      if (mobSkill.isIntersecting) {
+        mobSkill.target.style.opacity = 1;
+        mobSkill.target.style.transform = 'translateX(0)';
+      }
+    });
+  });
+
+  const mobSkill = document.querySelectorAll('.m-skill-left-area div');
+  for (let i = 0; i < 4; i++) {
+    mobObserver.observe(mobSkill[i]);
+  };
+
   // project section 스크롤 애니메이션
   const observer1 = new IntersectionObserver((e) => {
-    console.log(e)
     e.forEach((project) => {
       if (project.isIntersecting) {
         project.target.style.opacity = 1;
@@ -61,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < 4; i++) {
     observer1.observe(deviceImg[i]);
     observer1.observe(proContent[i]);
-  }
+  };
 
   // about section 스크롤 애니메이션
   const observer2 = new IntersectionObserver((e) => {
@@ -74,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   const title = document.querySelectorAll('h5');
-  const perTitle = document.querySelector('.per-title');
+  const perTitle = document.querySelector('.per-text');
   const intro = document.querySelector('.intro');
   const leftKeyword = document.querySelector('.left-keyword');
   const rightKeyword = document.querySelector('.right-keyword');
@@ -91,20 +105,21 @@ document.addEventListener('DOMContentLoaded', function () {
   observer2.observe(experience);
 });
 
-// emailjs
+// emailjs 호출
 const sendEmail = () => {
-  let templateParams  = {
-      name : document.getElementById('name').value,
-      email : document.getElementById('email').value,
-      message : document.getElementById('message').value,
+  let templateParams = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
   }
   emailjs.send('service_9xiq6nr', 'template_rl9hnii', templateParams)
-  .then(function(res){
-    alert("메일이 성공적으로 발송되었습니다.");
-  }, function(error){
-    console.log(error)
-    alert("메일 전송에 실패했습니다.");
-  })
+    .then(function (res) {
+      console.log(res);
+      alert("메일이 성공적으로 발송되었습니다.");
+    }, function (error) {
+      console.log(error);
+      alert("메일 전송에 실패했습니다.");
+    })
 }
 
 

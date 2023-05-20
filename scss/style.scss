@@ -23,7 +23,7 @@ $sub-color2: #5D31FF;
 
 @mixin button-style {
     margin-top: 20px;
-    padding: 8px 20px;
+    padding: 0.8rem 1.8rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 12px;
@@ -45,11 +45,16 @@ $sub-color2: #5D31FF;
 }
 
 // 공유 클래스
+
 body {
     color: #{$main-color};
     font-family: "SUIT-H";
-    background: #F4F0ED;
+    background-color: #F4F0ED;
     overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 section {
@@ -59,7 +64,7 @@ section {
 }
 
 h2 {
-    font-size: 84px;
+    font-size: 8.4rem;
     color: #{$sub-color};
     box-shadow: inset 0 -35px 0 #{$sub-color2};
 }
@@ -71,12 +76,15 @@ h3 {
 
 .project {
     @include center-align();
-    gap: 150px;
-    line-height: 1.5;
-    margin: 0 20px;
+    gap: 82px;
+    line-height: 1.4;
+
+    .m-pro-title {
+        display: none;
+    }
 
     img {
-        width: 20%;
+        width: 36rem;
         border: 3px solid #{$main-color};
         transform: translateX(-200px);
         opacity: 0;
@@ -90,16 +98,16 @@ h3 {
     }
 
     span {
-        font-size: 18px;
+        font-size: 2rem;
         letter-spacing: -0.04em;
         font-family: "SUIT-EB";
         box-shadow: inset 0 -18px 0 #C1C4FF;
     }
 
     p {
-        width: 456px;
-        word-break: break-all;
+        font-size: 1.8rem;
         font-family: "SUIT-M";
+        width: 44rem;
     }
 
     button {
@@ -153,6 +161,7 @@ h3 {
             cursor: pointer;
         }
 
+        /* 카테고리 */
         nav {
             position: absolute;
             top: 0;
@@ -173,7 +182,7 @@ h3 {
 
             p {
                 text-align: center;
-                font-size: 36px;
+                font-size: 3.6rem;
                 color: #{$main-color};
                 letter-spacing: -0.02em;
                 cursor: pointer;
@@ -209,6 +218,7 @@ h3 {
             padding: 25px;
             color: #{$sub-color};
             font-family: "SBAggroB";
+            font-size: 1.8rem;
         }
 
         .main-title {
@@ -220,14 +230,14 @@ h3 {
 
             p {
                 color: #{$sub-color};
-                font-size: 64px;
+                font-size: 6.4rem;
                 letter-spacing: -0.04em;
                 font-family: "SUIT-H";
             }
 
             p:first-child {
                 color: #{$sub-color};
-                font-size: 18px;
+                font-size: 1.8rem;
                 font-family: "SUIT-R";
                 padding-bottom: 10px;
             }
@@ -257,7 +267,7 @@ h3 {
         @include center-align();
         flex-direction: column;
         font-family: "SUIT-B";
-        font-size: 18px;
+        font-size: 1.8rem;
         line-height: 1.5;
 
         div {
@@ -268,13 +278,17 @@ h3 {
         }
     }
 
+    .m-skill-left-area {
+        display: none;
+    }
+
     .skill-right-area {
         text-align: center;
         @include background-area();
 
         div {
             letter-spacing: -0.04em;
-            font-size: 64px;
+            font-size: 6.4rem;
             height: 100vh;
             @include center-align();
             color: #{$sub-color};
@@ -304,55 +318,65 @@ h3 {
     gap: 60px;
 
     h5 {
-        position: relative;
-        font-size: 76px;
+        font-size: 7.6rem;
         letter-spacing: -0.04em;
         transform: translateX(-100px);
         opacity: 0;
         transition: all 1s;
     }
 
+    .about-bottom {
+        margin-bottom: 200px;
+    }
+
     .intro {
         @include center-align();
-        gap: 60px;
-        margin-bottom: 200px;
+        gap: 76px;
         @include animation();
         transform: translateX(200px);
         opacity: 0;
 
         img {
-            width: 25%;
+            width: 32rem;
         }
 
         p {
-            bottom: 0;
-            font-size: 24px;
+            font-size: 2rem;
             font-family: "SUIT-M";
-            line-height: 1.5;
+            line-height: 1.4;
             letter-spacing: -0.06em;
+            width: 48rem;
         }
     }
 
-    .per-title {
-        width: 70%;
-        word-break: break-all;
+    .per-content {
         display: flex;
         flex-direction: column;
-        gap: 30px;
-        @include animation();
-        transform: translateX(-100px);
-        opacity: 0;
 
-        span {
+        .per-text {
             font-family: "SUIT-M";
-            line-height: 1.2;
-            font-size: 18px
+            word-wrap: break-all;
+            line-height: 1.4;
+            letter-spacing: -0.06em;
+            font-size: 2rem;
+            width: 56rem;
+            @include animation();
+            transform: translateX(-100px);
+            opacity: 0;
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li span {
+            box-shadow: inset 0 -18px 0 #C1C4FF;
         }
     }
 
     .keyword {
         @include center-align();
-        margin-bottom: 200px;
+        letter-spacing: -0.06em;
 
         li {
             position: relative;
@@ -367,7 +391,7 @@ h3 {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                font-size: 26px;
+                font-size: 2.6rem;
                 font-family: "SUIT-SB";
                 width: 100%;
                 color: #{$main-color};
@@ -405,7 +429,7 @@ h3 {
             display: flex;
             flex-direction: column;
             line-height: 1.6;
-            font-size: 18px;
+            font-size: 2rem;
         }
 
         .line {
@@ -427,7 +451,7 @@ h3 {
     background-color: #{$main-color};
 
     span {
-        font-size: 56px;
+        font-size: 5.6rem;
         color: #{$sub-color};
     }
 
@@ -459,7 +483,7 @@ h3 {
     }
 
     .info {
-        font-size: 18px;
+        font-size: 1.8rem;
         margin-top: 50px;
         font-family: "SUIT-M";
     }

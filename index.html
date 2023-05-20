@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylem.css">
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- 플러그인 -->
+  <!-- emailjs -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
+      // 공개키
       emailjs.init("safhfbobRTqExyi99");
     })();
   </script>
@@ -70,7 +72,7 @@
   <!-- 스킬 영역 -->
   <section class="skill-section">
     <div class="skill-left-area">
-      <div class="content1">
+      <div>
         <p>JSX문법을 사용하여 레이아웃 제작</p>
         <p>Component, Props, Router 등 React에 대한 이해 </p>
         <p>React Hook을 활용한 기능 구현</p>
@@ -79,30 +81,65 @@
         <p>Firebase를 이용한 로그인/ 회원가입 기능 구현</p>
         <p>Styled-component를 이용한 CSS 작성</p>
       </div>
-      <div class="content2">
+      <div>
         <p>ES6문법 활용</p>
         <p>Vanilla Javascript를 아용한 애니메이션 기능 구현</p>
         <p>Jquery DOM을 이용한 기능 구현</p>
         <p>비동기 통신 AJAX에 대한 이해</p>
       </div>
-      <div class="content3">
+      <div>
         <p>시멘틱 마크업을 통한 의미있는 구조 설계</p>
         <p>CSS 3.0 & 크로스브라우징</p>
         <p>반응형 웹사이트 구축</p>
         <p>SCSS를 이용한 프리프로세싱</p>
       </div>
-      <div class="content4">
+      <div>
         <p>UIUX에 대한 이해</p>
         <p>Potoshop, Illustrator, Figma를 이용하여<br />
           아이콘, 배너, 와이어프레임, 웹 사이트 시안 제작 </p>
         <p>Github 관리</p>
       </div>
     </div>
+    <!-- 모바일 max-width: 700px -->
+    <div class="m-skill-left-area">
+      <div>
+        <span class="m-skill-title">REACT</span>
+        <p>JSX문법을 사용하여 레이아웃 제작</p>
+        <p>Component, Props, Router 등 React에 대한 이해 </p>
+        <p>React Hook을 활용한 기능 구현</p>
+        <p>Map을 이용한 반복되는 코드 최소화</p>
+        <p>Redux를 이용한 장바구니 기능 구현</p>
+        <p>Firebase를 이용한 로그인/ 회원가입 기능 구현</p>
+        <p>Styled-component를 이용한 CSS 작성</p>
+      </div>
+      <div>
+        <span class="m-skill-title">JAVASCRIPT</span>
+        <p>ES6문법 활용</p>
+        <p>Vanilla Javascript를 아용한 애니메이션 기능 구현</p>
+        <p>Jquery DOM을 이용한 기능 구현</p>
+        <p>비동기 통신 AJAX에 대한 이해</p>
+      </div>
+      <div>
+        <span class="m-skill-title">HTML&CSS</span>
+        <p>시멘틱 마크업을 통한 의미있는 구조 설계</p>
+        <p>CSS 3.0 & 크로스브라우징</p>
+        <p>반응형 웹사이트 구축</p>
+        <p>SCSS를 이용한 프리프로세싱</p>
+      </div>
+      <div>
+        <span class="m-skill-title">OTHERS</span>
+        <p>UIUX에 대한 이해</p>
+        <p>Potoshop, Illustrator, Figma를 이용하여<br />
+          아이콘, 배너, 와이어프레임, 웹 사이트 시안 제작 </p>
+        <p>Github 관리</p>
+      </div>
+    </div>
+    <!-- 모바일 max-width: 700px 끝 -->
     <div class="skill-right-area">
-      <div id="skill1">REACT</div>
-      <div id="skill2">JAVASCRIPT</div>
-      <div id="skill3">HTML<br />CSS</div>
-      <div id="skill4">OTHERS</div>
+      <div>REACT</div>
+      <div>JAVASCRIPT</div>
+      <div>HTML<br />CSS</div>
+      <div>OTHERS</div>
     </div>
   </section>
   <!-- 프로젝트 타이틀 -->
@@ -113,9 +150,11 @@
   <section class="project-section">
     <!-- 프로젝트-1 -->
     <div class="project">
+      <!-- m-pro-title - max-width: 700px -->
+      <h3 class="m-pro-title">Rootfresh</h3>
       <img class="device-img" src="./image/project1.png" alt="프로젝트 이미지" />
       <div class="pro-content">
-        <h3>Rootfresh</h3>
+        <h3 class="pro-title">Rootfresh</h3>
         <span>#반응형 #Javascript #React #Redux #Firebase</span><br />
         <p>
           오픈마켓 쇼핑몰 사이트입니다.
@@ -129,9 +168,11 @@
     </div>
     <!-- 프로젝트-2 -->
     <div class="project">
+      <!-- m-pro-title - max-width: 700px -->
+      <h3 class="m-pro-title">Rock-scissor-paper Game</h3>
       <img class="device-img" src="./image/project2.png" alt="프로젝트 이미지" />
       <div class="pro-content">
-        <h3>Rock-scissor-paper Game</h3>
+        <h3 class="pro-title">Rock-scissor-paper Game</h3>
         <span>#Javascript #React</span><br />
         <p>
           Pc에서 즐길 수 있는 가위바위보 게임입니다.
@@ -145,9 +186,11 @@
     </div>
     <!-- 프로젝트-3 -->
     <div class="project">
+      <!-- m-pro-title - max-width: 700px -->
+      <h3 class="m-pro-title">Bestseller</h3>
       <img class="device-img" src="./image/project3.png" alt="프로젝트 이미지" />
       <div class="pro-content">
-        <h3>Bestseller</h3>
+        <h3 class="pro-title">Bestseller</h3>
         <span>#반응형 #Jquery #SCSS</span><br />
         <p>
           마켓 회사 소개 사이트입니다. Jquery를 이용하여 아코디언 메뉴, 이미지 호버 기능, 스크롤 애니메이션, 슬라이드 기능을
@@ -160,9 +203,11 @@
     </div>
     <!-- 프로젝트-4 -->
     <div class="project">
+      <!-- m-pro-title - max-width: 700px -->
+      <h3 class="m-pro-title">Jieun's portfolio</h3>
       <img class="device-img" src="./image/project4.png" alt="프로젝트 이미지" />
       <div class="pro-content">
-        <h3>Jieun's portfolio</h3>
+        <h3 class="pro-title">Jieun's portfolio</h3>
         <span>#Javascript #SCSS</span><br />
         <p>
           직접 제작한 포트폴리오 페이지 입니다. Javascript와 Jquery를 이용하여 카테고리 기능,
@@ -181,35 +226,45 @@
   <!-- 어바웃 영역 -->
   <section class="about-section">
     <h5>Introduce</h5>
-    <div class="intro">
-      <img src="./image/my_profile2.png" alt="프로필사진" />
-      <div>
-        <p>"시도와 실패를 반복하며 기능을 구현하고 안주하지 않고 </p>
-        <p>더 나은 기능으로 발전 시키기 위한 방법을 고민했던 경험은</p>
-        <p>앞으로 업무를 함에 있어 실패를 두려워 하지 않고 더 나은 발전과 성장으로</p>
-        <p>나아가는 발판이 될 것입니다."</p>
+    <div class="intro about-bottom">
+      <img src="./image/my_profile4.png" alt="프로필사진" />
+      <p>
+        "시도와 실패를 반복하며 기능을 구현하고 안주하지 않고
+        더 나은 기능으로 발전 시키기 위한 방법을 고민했던 경험은
+        앞으로 업무를 함에 있어 실패를 두려워 하지 않고 더 나은 발전과 성장으로
+        나아가는 발판이 될 것입니다."
+      </p>
+    </div>
+    <h5>Keyword</h5>
+    <div class="per-content">
+      <div class="per-text-wrap">
+        <ul class="per-text">
+          <li>
+            <span>🙏 존중과 배려</span>
+            <p>열린 마음과 정직함을 가지고 나의 이익보다 팀을 우선시하는 사람</p>
+          </li>
+          <li>
+            <span>🤝 원활한 커뮤니케이션</span>
+            <p>효율적인 협업이 가능하도록 나의 생각을 현명하게 정리하여 전달할 수 있는 사람</p>
+          </li>
+          <li>
+            <span>📑 책임감</span>
+            <p>주어진 업무를 정해진 시간에 완수하기 위해 집중하는 사람</p>
+          </li>
+        </ul>
       </div>
+      <ul class="keyword about-bottom">
+        <li class="left-keyword">
+          <p>존중과 배려</p>
+        </li>
+        <li>
+          <p>원활한 커뮤니케이션</p>
+        </li>
+        <li class="right-keyword">
+          <p>책임감</p>
+        </li>
+      </ul>
     </div>
-    <div class="per-title">
-      <h5>Personality</h5>
-      <span class="per-content">
-        '도전하고 싶다면 망설이지 말자'저의 가치관 입니다.
-        그리고 도전했다면 그에 대한 책임감이 따르게 된다는 것 또한 알게 되었습니다.
-        개발자의 꿈을 꾸게 되었을 때 결심했던 것은 '전문성을 갖춘 개발자가 되자'였습니다.
-        그때의 결심을 잊지 않고 책임감을 가지고 배우고 계속 성장하며 꿈을 이뤄내겠습니다.
-      </span>
-    </div>
-    <ul class="keyword">
-      <li class="left-keyword">
-        <p>성장지향적</p>
-      </li>
-      <li>
-        <p>원활한 커뮤니케이션</p>
-      </li>
-      <li class="right-keyword">
-        <p>책임감</p>
-      </li>
-    </ul>
     <h5>Education</h5>
     <ul class="history education">
       <li>

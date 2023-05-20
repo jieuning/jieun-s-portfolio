@@ -9,33 +9,6 @@
 }
 
 @font-face {
-    font-family: "SBAggroL";
-    src: url(./font/SBaggroL.ttf);
-}
-
-@font-face {
-    font-family: "SBAggroM";
-    src: url(./font/SBaggroM.ttf);
-}
-
-@font-face {
-    font-family: "SUIT-L";
-    src: url(./font/SUIT-Light.woff2) format('woff2'),
-         url(./font/SUIT-Light.ttf) format('truetype');
-}
-@font-face {
-    font-family: "SUIT-T";
-    src: url(./font/SUIT-Thin.woff2) format('woff2'),
-         url(./font/SUIT-Thin.ttf) format('truetype');
-
-}
-
-@font-face {
-    font-family: "SUIT-R";
-    src: url(./font/SUIT-Regular.woff2) format('woff2'),
-         url(./font/SUIT-Regular.ttf) format('truetype');
-}
-@font-face {
     font-family: "SUIT-M";
     src: url(./font/SUIT-Medium.woff2) format('woff2'),
          url(./font/SUIT-Medium.ttf) format('truetype');
