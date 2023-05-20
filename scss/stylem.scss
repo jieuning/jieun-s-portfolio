@@ -210,12 +210,23 @@
 
 @media(max-width: 400px) {
 
-  html,
-  body {
-    font-size: 40%;
+  .project p {
+    width: 38rem;
+  }
+
+  .about-section .intro p {
+    width: 40rem;
+  }
+
+  .about-section .per-content .per-text {
+    width: 40rem;
+  }
+
+  .about-section .keyword li p {
+    font-size: 1.8rem;
   }
 
   .contact-section span {
-    font-size: 4.2rem;
+    font-size: 3.8rem;
   }
 }
