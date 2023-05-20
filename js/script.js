@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   const title = document.querySelectorAll('h5');
-  const perTitle = document.querySelector('.per-text');
+  const perTitle = document.querySelector('.key-text');
   const intro = document.querySelector('.intro');
   const leftKeyword = document.querySelector('.left-keyword');
   const rightKeyword = document.querySelector('.right-keyword');
