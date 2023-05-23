@@ -1,27 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelectorAll('nav p');
-  const section1 = document.querySelector('#main');
-  const section2 = document.querySelector('#skill');
-  const section3 = document.querySelector('#projects');
-  const section4 = document.querySelector('#about');
-  const section5 = document.querySelector('#contact');
-  const top1 = section1.offsetTop;
-  const top2 = section2.offsetTop;
-  const top3 = section3.offsetTop;
-  const top4 = section4.offsetTop;
-  const top5 = section5.offsetTop;
-
-  const menuArr = [
-    top1, top2, top3, top4, top5
-  ]
-
-  // 카테고리 메뉴 클릭시 해당 offsetTop값으로 이동
-  menuArr.forEach((arr, i) => {
-    menu[i].onclick = () => {
-      window.scroll({ top: arr, behavior: "smooth" })
-    };
-  });
-
 
   // skill section 스크롤시 텍스트 전환 애니메이션
   const activeElements = () => {
@@ -33,10 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
       let Offset = skill.offsetTop - 100;
 
       if (Scroll > Offset) {
-        contents[i].style.opacity = 1;
-        if (Scroll > Offset + innerHeight) {
-          contents[i].style.opacity = 0;
-        }
+        Scroll > Offset + innerHeight ?
+          contents[i].style.opacity = 0
+          : contents[i].style.opacity = 1;
       } else {
         contents[i].style.opacity = 0
       }
@@ -103,30 +79,4 @@ document.addEventListener('DOMContentLoaded', function () {
   observer2.observe(rightKeyword);
   observer2.observe(education);
   observer2.observe(experience);
-});
-
-// emailjs 호출
-const sendEmail = () => {
-  let templateParams = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    message: document.getElementById('message').value,
-  }
-  emailjs.send('service_9xiq6nr', 'template_rl9hnii', templateParams)
-    .then(function (res) {
-      console.log(res);
-      alert("메일이 성공적으로 발송되었습니다.");
-    }, function (error) {
-      console.log(error);
-      alert("메일 전송에 실패했습니다.");
-    })
-}
-
-
-// jquery
-$(document).ready(function () {
-  // 카테고리 토글
-  $('.category').click(function () {
-    $('nav').toggleClass('active');
-  });
 });
